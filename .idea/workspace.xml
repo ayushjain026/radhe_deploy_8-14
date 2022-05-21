@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81c78d83-ec29-4aba-9916-2bdc1987fd09" name="Changes" comment="" />
+    <list default="true" id="81c78d83-ec29-4aba-9916-2bdc1987fd09" name="Changes" comment="product details page ready">
+      <change afterPath="$PROJECT_DIR$/RadheInd_Admin/migrations/0004_pagetitleoption_alter_productdetails_titleid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/ProductImage/AyushJain_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/ProductImage/MicrosoftTeams-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/img/blog/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/SubCategory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RadheInd_Admin/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/RadheInd_Admin/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RadheInd_Admin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RadheInd_Admin/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RadheInd_Admin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RadheInd_Admin/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RadheInd_Admin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RadheInd_Admin/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/radhedetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/radhedetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,30 +28,49 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="V2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3db2a723-6fee-4d8a-9b8c-b6fe23420f34" />
+        <option name="url" value="https://github.com/ayushjain026/Radhe-Industries.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="24yhfVoxGxEMEJfqYDcnj2Zv877" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/assets/img/blog" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\150229\OneDrive - Arrow Electronics, Inc\Desktop\Ayush\Radhe-Industries-v1-master\static\assets\img\blog" />
       <recent name="E:\Radhe Industries\templates" />
       <recent name="E:\Radhe Industries\static" />
       <recent name="E:\Radhe Industries\static\Content" />
@@ -84,6 +120,14 @@
       <workItem from="1651424211362" duration="5427000" />
       <workItem from="1651506558231" duration="7958000" />
     </task>
+    <task id="LOCAL-00001" summary="product details page ready">
+      <created>1651683860464</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651683860464</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +143,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="product details page ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="product details page ready" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

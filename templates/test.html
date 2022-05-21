@@ -1,19 +1,9 @@
 <h1>Title</h1>
-<form action="{% url 'title' %}" method="post">
+<form action="{% url 'maintitle' %}" method="post">
     {% csrf_token %}
     <input type="text" name="title">
     <input type="submit">
 </form>
 
-<h1>Detail</h1>
-<form action="{% url 'details' %}" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    Title<br>
-    <input type="text" name="P_title"><br>
-    Details<br>
-    <input type="text" name="P_detail"><br>
-    Image<br>
-    <input type="file" name="P_image"><br>
-    <input type="hidden" name="id" value="2">
-    <input type="submit">
-</form>
+
+

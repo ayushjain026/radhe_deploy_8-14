@@ -1,0 +1,11 @@
+<h1>Option Title</h1>
+
+<h2 style="text-transform: capitalize;">{{ title.title }}</h2>
+
+<form action="{% url 'addSubCategory' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="title">
+    <input type="hidden" name="id" value="2">
+    <br>
+    <input type="submit">
+</form>
