@@ -5,7 +5,7 @@
 <form action="{% url 'addSubCategory' %}" method="post">
     {% csrf_token %}
     <input type="text" name="title">
-    <input type="hidden" name="id" value="2">
+    <input type="hidden" name="id" value="{{ title.id }}">
     <br>
     <input type="submit">
 </form>

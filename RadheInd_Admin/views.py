@@ -34,8 +34,10 @@ def details(request):
         image = request.FILES['P_image']
         id = request.POST['id']
         data1 = pageTitleOption.objects.get(id=id)
-        data = productDetails.objects.create(detail=detail, titleId=data1, productTitle=title, productImage=image)
+        data1.productImage = image
+        data = productDetails.objects.create(detail=detail, titleId=data1, productTitle=title)
         data.save()
+        data1.save()
         return redirect(request.META['HTTP_REFERER'])
     else:
         id = request.GET['id']
@@ -58,7 +60,7 @@ def addSubCategory(request):
         data.save()
         return redirect('/')
     else:
-        title = pageTitleOption.objects.get(id=request.GET['id'])
+        title = pageTitle.objects.get(id=request.GET['id'])
         return render(request, "SubCategory.html", {'title':title})
 
 
