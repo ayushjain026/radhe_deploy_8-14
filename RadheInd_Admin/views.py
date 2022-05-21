@@ -43,7 +43,7 @@ def details(request):
         id = request.GET['id']
         data1 = pageTitleOption.objects.get(id=id)
         base_dir = settings.MEDIA_ROOT
-        image = os.path.join(base_dir, str(data1.productImage))
+        image = os.path.join(base_dir, str(data1.productImage.url))
         data2 = productDetails.objects.filter(titleId=data1)
         # for i in data2:
         #     print(i.titleId.title)

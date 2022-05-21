@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81c78d83-ec29-4aba-9916-2bdc1987fd09" name="Changes" comment="product details page ready">
+    <list default="true" id="81c78d83-ec29-4aba-9916-2bdc1987fd09" name="Changes" comment="new commit">
       <change afterPath="$PROJECT_DIR$/RadheInd_Admin/migrations/0004_pagetitleoption_alter_productdetails_titleid.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/media/ProductImage/AyushJain_1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/media/ProductImage/MicrosoftTeams-image.png" afterDir="false" />
@@ -35,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="V2" />
+        <entry key="$PROJECT_DIR$" value="V3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653123510287</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new commit">
+      <created>1653128430428</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653128430428</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +162,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="product details page ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="product details page ready" />
+    <MESSAGE value="new commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="new commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
