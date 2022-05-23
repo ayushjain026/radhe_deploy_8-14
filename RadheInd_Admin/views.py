@@ -1,9 +1,9 @@
 import os
-
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from RadheInd_Admin.models import *
 from main_app import settings
+from django.core.mail import send_mail
 
 
 def index(request):
@@ -42,14 +42,15 @@ def details(request):
     else:
         id = request.GET['id']
         data1 = pageTitleOption.objects.get(id=id)
-        base_dir = settings.MEDIA_ROOT
-        image = os.path.join(base_dir, str(data1.productImage.url))
+        print(data1.productImage)
+        # base_dir = settings.MEDIA_ROOT
+        # image = os.path.join(base_dir, str(data1.productImage.url))
         data2 = productDetails.objects.filter(titleId=data1)
         # for i in data2:
         #     print(i.titleId.title)
         main_title = pageTitle.objects.all()
         titleSubOption = pageTitleOption.objects.all()
-        return render(request, 'radhedetails.html', {"content":data2, 'image':image, 'data1':data1, "pagetitle":data1.title, 'main_title':main_title, 'titleSubOption':titleSubOption})
+        return render(request, 'radhedetails.html', {"content":data2, 'data1':data1, "pagetitle":data1.title, 'main_title':main_title, 'titleSubOption':titleSubOption})
 
 
 def addSubCategory(request):
@@ -62,6 +63,21 @@ def addSubCategory(request):
     else:
         title = pageTitle.objects.get(id=request.GET['id'])
         return render(request, "SubCategory.html", {'title':title})
+
+def email_sending(request):
+    name = request.POST['name1']
+    email = request.POST['email']
+    sub = request.POST['subject']
+    message = request.POST['message']
+    print(f"name = {name}\nemail = {email}\nsub = {sub}\nmessage = {message}")
+
+    subject = f"Customer"
+    message = (f"name = {name}\nemail = {email}\nsub = {sub}\nmessage = {message}")
+    from_email = settings.EMAIL_HOST
+    to_list = [email]
+    send_mail(subject, message, from_email, to_list, fail_silently=True)
+
+    return HttpResponse(f"Request Send")
 
 
 def test(request):

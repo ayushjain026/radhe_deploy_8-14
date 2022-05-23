@@ -47,10 +47,10 @@
         </th>
       </tr>
       <tr>
-        <th style="width:600px; vertical-align:top">
-          <img width="500" height="600" style="margin-top: 65px; margin-left: 50px;" src="C:\Users\150229\OneDrive - Arrow Electronics, Inc\Desktop\Capture.PNG" />
-          <h2>{{image.url}}</h2>
-        </th>
+            <th style="width:600px; vertical-align:top">
+              <img width="500" height="600" style="margin-top: 65px; margin-left: 50px;" src="{{ data1.productImage.url }}" />
+<!--              <h2>{{ data1.productImage.url }}</h2>-->
+            </th>
         <th style="width: 850px">
           {% for i in content %}
             <h1>{{ i.productTitle }}</h1>
