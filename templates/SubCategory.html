@@ -2,9 +2,10 @@
 
 <h2 style="text-transform: capitalize;">{{ title.title }}</h2>
 
-<form action="{% url 'addSubCategory' %}" method="post">
+<form action="{% url 'addSubCategory' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="text" name="title">
+    <input type="text" name="title"><br>
+    <input type="file" name="P_image" >
     <input type="hidden" name="id" value="{{ title.id }}">
     <br>
     <input type="submit">

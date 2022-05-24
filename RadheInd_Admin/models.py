@@ -7,7 +7,7 @@ class pageTitle(models.Model):
 
 class pageTitleOption(models.Model):
     title = models.CharField(max_length=200)
-    productImage = models.ImageField(upload_to='ProductImage', null=True, blank=True)
+    productImage = models.ImageField(upload_to='ProductImage', null=True, blank='dafault.jpg')
     pageTitleId = models.ForeignKey(pageTitle, on_delete=models.CASCADE, related_name="productdetails")
 
 

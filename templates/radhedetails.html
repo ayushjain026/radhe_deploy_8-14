@@ -51,13 +51,29 @@
               <img width="500" height="600" style="margin-top: 65px; margin-left: 50px;" src="{{ data1.productImage.url }}" />
 <!--              <h2>{{ data1.productImage.url }}</h2>-->
             </th>
-        <th style="width: 850px">
-          {% for i in content %}
-            <h1>{{ i.productTitle }}</h1>
-            <h3 style="color:#5c636a">{{ i.detail }}</h3><br>
-            <br><br>
-          {% endfor %}
-        </th>
+        {% if user.is_superuser %}
+              {% for i in content %}
+              <td style="width: 850px">
+                  <h1>{{ i.productTitle }}</h1>
+                  <h3 style="color:#5c636a">{{ i.detail }}</h3><br>
+                  <br><br>
+              </td>
+              <td>
+                  <form action="{% url 'delete_servce_content' %}" method="get" enctype="multipart/form-data">
+                      <input type="hidden" name="id" value="{{ i.id }}">
+                      <input type="submit" style="color: white; background-color: red" value="Delete">
+                  </form>
+              </td>
+              {% endfor %}
+        {% else %}
+          <th style="width: 850px">
+              {% for i in content %}
+              <h1>{{ i.productTitle }}</h1>
+              <h3 style="color:#5c636a">{{ i.detail }}</h3><br>
+              <br><br>
+              {% endfor %}
+          </th>
+        {% endif %}
       </tr>
     </table>
     <br><br>
@@ -69,9 +85,8 @@
             Title<br>
             <input type="text" name="P_title"><br>
             Details<br>
-            <input type="text" name="P_detail"><br>
-            Image<br>
-            <input type="file" name="P_image"><br>
+            <input type="text" name="P_detail"><br><br>
+<!--            <input type="file" name="P_image"><br>-->
             <input type="hidden" name="id" value="{{data1.id}}">
             <input type="submit">
         </form>

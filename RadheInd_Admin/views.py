@@ -31,10 +31,10 @@ def details(request):
     if request.method == 'POST':
         detail = request.POST['P_detail']
         title = request.POST['P_title']
-        image = request.FILES['P_image']
+        # image = request.FILES['P_image']
         id = request.POST['id']
         data1 = pageTitleOption.objects.get(id=id)
-        data1.productImage = image
+        # data1.productImage = image
         data = productDetails.objects.create(detail=detail, titleId=data1, productTitle=title)
         data.save()
         data1.save()
@@ -56,8 +56,9 @@ def details(request):
 def addSubCategory(request):
     if request.method == "POST":
         title = request.POST['title']
+        P_image = request.FILES['P_image']
         maintitleObj = pageTitle.objects.get(id=request.POST['id'])
-        data = pageTitleOption.objects.create(title=title, pageTitleId=maintitleObj)
+        data = pageTitleOption.objects.create(title=title, productImage=P_image, pageTitleId=maintitleObj)
         data.save()
         return redirect('/')
     else:
@@ -76,8 +77,14 @@ def email_sending(request):
     from_email = settings.EMAIL_HOST
     to_list = [email]
     send_mail(subject, message, from_email, to_list, fail_silently=True)
-
     return HttpResponse(f"Request Send")
+
+
+def delete_servce_content(request):
+    id = request.GET['id']
+    data = productDetails.objects.get(id=id)
+    data.delete()
+    return redirect(request.META['HTTP_REFERER'])
 
 
 def test(request):

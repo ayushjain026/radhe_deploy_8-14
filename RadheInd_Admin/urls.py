@@ -10,5 +10,6 @@ urlpatterns = [
     path('title/', views.title, name="title"),
     path('details/', views.details, name="details"),
     path('addSubCategory/', views.addSubCategory, name="addSubCategory"),
-    path('email_sending/', views.email_sending, name="email_sending")
+    path('email_sending/', views.email_sending, name="email_sending"),
+    path('delete_servce_content/', views.delete_servce_content, name="delete_servce_content"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
