@@ -87,6 +87,16 @@ def delete_servce_content(request):
     return redirect(request.META['HTTP_REFERER'])
 
 
+def edit_servce_content(request):
+    id = request.GET["id"]
+    details = request.GET["details"]
+    data = productDetails.objects.get(id=id)
+    data.detail = details
+    data.save()
+    return redirect(request.META['HTTP_REFERER'])
+
+
+
 def test(request):
     data = testing.objects.all()
     print(data)

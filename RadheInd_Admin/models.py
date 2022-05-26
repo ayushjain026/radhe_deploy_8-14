@@ -17,5 +17,18 @@ class productDetails(models.Model):
     titleId = models.ForeignKey(pageTitleOption, on_delete=models.CASCADE, related_name="productdetails")
 
 
+class testimonials(models.Model):
+    company_logo = models.ImageField(upload_to='CompanyLogo', null=True, blank='dafault.jpg')
+    Company_name = models.CharField(max_length=100)
+    customer_name = models.CharField(max_length=100)
+    customer_position = models.CharField(max_length=100)
+    feedback = models.CharField(max_length=500)
+
+
+class certificates(models.Model):
+    certificateImage = models.ImageField(upload_to="CompanyCertificates", null=True, blank='dafault.jpg')
+    certificateName = models.CharField(max_length=100)
+
+
 class testing(models.Model):
     txt = models.CharField(max_length=200)

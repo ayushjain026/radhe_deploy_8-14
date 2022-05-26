@@ -12,4 +12,6 @@ urlpatterns = [
     path('addSubCategory/', views.addSubCategory, name="addSubCategory"),
     path('email_sending/', views.email_sending, name="email_sending"),
     path('delete_servce_content/', views.delete_servce_content, name="delete_servce_content"),
+    path('edit_servce_content/', views.edit_servce_content, name="edit_servce_content")
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

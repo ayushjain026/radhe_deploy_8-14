@@ -2,302 +2,307 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <title>Radhe Industry</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>Radhe Industry</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="{%static 'Radhe/images/logo.jpg' %}" rel="icon">
-  <link href="{%static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="{%static 'Radhe/images/logo.jpg' %}" rel="icon">
+    <link href="{%static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+          rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-<!--  <link rel="stylesheet" href="{%static 'assets/css/style1.css' %}">-->
-  <link href="{%static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
-  <link href="{%static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{%static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %} " rel="stylesheet">
-  <link href="{%static 'assets/vendor/boxicons/css/boxicons.min.css' %} " rel="stylesheet">
-  <link href="{%static 'assets/vendor/glightbox/css/glightbox.min.css' %} " rel="stylesheet">
-  <link href="{%static 'assets/vendor/swiper/swiper-bundle.min.css' %} " rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <!--  <link rel="stylesheet" href="{%static 'assets/css/style1.css' %}">-->
+    <link href="{%static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{%static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{%static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %} " rel="stylesheet">
+    <link href="{%static 'assets/vendor/boxicons/css/boxicons.min.css' %} " rel="stylesheet">
+    <link href="{%static 'assets/vendor/glightbox/css/glightbox.min.css' %} " rel="stylesheet">
+    <link href="{%static 'assets/vendor/swiper/swiper-bundle.min.css' %} " rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="{%static 'assets/css/style.css' %}" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="{%static 'assets/css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: eBusiness - v4.7.0
-  * Template URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- =======================================================
+    * Template Name: eBusiness - v4.7.0
+    * Template URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
+<!-- ======= Header ======= -->
+<header class="fixed-top d-flex align-items-center" id="header">
     <div class="container d-flex justify-content-between">
 
-      <div class="logo">
-        <h1><a href="{% url 'index' %}">Radhe Induestries<br><span>"we serve to save"</span></a></h1>
-      </div>
+        <div class="logo">
+            <h1><a href="{% url 'index' %}">Radhe Induestries<br><span>"we serve to save"</span></a></h1>
+        </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
-<!--          <li><a class="dropdown" href="#about"><span>ABOUT US</span></a></li>-->
-          <li class="dropdown"><a href="#about"><span>ABOUT US</span> <i class="bi bi-chevron-down"></i></a>
+        <nav class="navbar" id="navbar">
             <ul>
-              <li class="dropdown"><a href="#"><span>ABOUT RADHE</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Credentials and Certificates</a></li>
-                  <li><a href="#">Event Calendar</a></li>
-                  <li><a href="#">Careers</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>SERVICES</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-                {% for main_list in main_title %}
-                    <li class="dropdown"><a href="#"><span>{{ main_list.title }}</span> <i class="bi bi-chevron-right"></i></a>
+                <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
+                <!--          <li><a class="dropdown" href="#about"><span>ABOUT US</span></a></li>-->
+                <li class="dropdown"><a href="#about"><span>ABOUT US</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                      {% for option in titleSubOption %}
-                        {% if main_list.id == option.pageTitleId.id %}
-                          <li><a href="/details?id={{option.id}}">{{ option.title }}</a></li>
+                        <li class="dropdown"><a href="#"><span>ABOUT RADHE</span> <i
+                                class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">Credentials and Certificates</a></li>
+                                <li><a href="#">Event Calendar</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Testimonials</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>SERVICES</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        {% for main_list in main_title %}
+                        <li class="dropdown"><a href="#"><span>{{ main_list.title }}</span> <i
+                                class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                {% for option in titleSubOption %}
+                                {% if main_list.id == option.pageTitleId.id %}
+                                <li><a href="/details?id={{option.id}}">{{ option.title }}</a></li>
+                                {% endif %}
+                                {% endfor %}
+                                <li><a href="/addSubCategory?id={{main_list.id}}">Add Sub Category</a></li>
+                            </ul>
+                        </li>
+                        {% endfor %}
+                        {% if user.is_superuser %}
+                        <li class="dropdown"><a href="{% url 'test' %}"><span>Add Service Category</span></a></li>
                         {% endif %}
-                      {% endfor %}
-                      <li><a href="/addSubCategory?id={{main_list.id}}">Add Sub Category</a></li>
-                    </ul></li>
-                {% endfor %}
-              {% if user.is_superuser %}
-                <li class="dropdown"><a href="{% url 'test' %}"><span>Add Service Category</span></a></li>
-              {% endif %}
-<!--              1-->
-<!--              <li class="dropdown"><a href="#"><span>Process Hazard Analysis (PHA)</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">HAZOP (Hazard and Operability) Study</a></li>-->
-<!--                  <li><a href="#">HAZID (Hazard Identification) Study</a></li>-->
-<!--                  <li><a href="#">What-If Analysis</a></li>-->
-<!--                  <li><a href="#">HAC</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--&lt;!&ndash;              2&ndash;&gt;-->
-<!--              <li class="dropdown"><a href="#"><span>Hygiene Services</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">Industrial Hygiene Survey</a></li>-->
-<!--                  <li><a href="#">Chemical Exposure</a></li>-->
-<!--                  <li><a href="#">Noise Monitoring</a></li>-->
-<!--                  <li><a href="#">Illumination Survey</a></li>-->
-<!--                  <li><a href="#">Ventilation Survey</a></li>-->
-<!--                  <li><a href="#">Ergonomics Survey</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--&lt;!&ndash;              3&ndash;&gt;-->
-<!--              <li class="dropdown"><a href="#"><span>Process Safety Management (PSM)</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">PSM Gap analysis CUM Audit</a></li>-->
-<!--                  <li><a href="#">PSM Training</a></li>-->
-<!--                  <li><a href="#">PSM Implementation Program</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--&lt;!&ndash;              4&ndash;&gt;-->
-<!--              <li class="dropdown"><a href="#"><span>Material Handling</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">EOT Operator Training</a></li>-->
-<!--                  <li><a href="#">Hydra Operator Training</a></li>-->
-<!--                  <li><a href="#">Forklift Operation Training</a></li>-->
-<!--                  <li><a href="#">Rigging Operation</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--&lt;!&ndash;              5&ndash;&gt;-->
-<!--              <li class="dropdown"><a href="#"><span>Risk Assessment</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">HIRA (Hazards Identification and Risk Assessment)</a></li>-->
-<!--                  <li><a href="#">QRA (Quantitative Risk Assessment)</a></li>-->
-<!--                  <li><a href="#">JSA</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--&lt;!&ndash;              6&ndash;&gt;-->
-<!--              <li class="dropdown"><a href="#"><span>Fire Safety Services</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">Fire Adequacy Survey</a></li>-->
-<!--                  <li><a href="#">Fire Safety Audit</a></li>-->
-<!--                  <li><a href="#">Fire Load Calculation</a></li>-->
-<!--                  <li><a href="#">Design of fire network</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--&lt;!&ndash;              7&ndash;&gt;-->
-<!--              <li class="dropdown"><a href="#"><span>Safety Audit</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">Third Party Safety Audit (IS: 14489)</a></li>-->
-<!--                  <li><a href="#">Process Safety Audit</a></li>-->
-<!--                  <li><a href="#">Electrical Safety Audit</a></li>-->
-<!--                  <li><a href="#">Fire Safety Audit</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--&lt;!&ndash;              8&ndash;&gt;-->
-<!--              <li class="dropdown"><a href="#"><span>Electrical Safety Services</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">Lightning Arrester Survey</a></li>-->
-<!--                  <li><a href="#">Lightning Arrester Installation</a></li>-->
-<!--                  <li><a href="#">Electrical Safety Audit</a></li>-->
-<!--                  <li><a href="#">ARC Flash Study</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--&lt;!&ndash;              9&ndash;&gt;-->
-<!--              <li class="dropdown"><a href="#"><span>Other Services</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">OEP (On-Site Emergency Plan)</a></li>-->
-<!--                  <li><a href="#">Safety Report (68K)</a></li>-->
-<!--                  <li><a href="#">ERDMP (Emergency Response and Disaster Management Plan)</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
+                        <!--              1-->
+                        <!--              <li class="dropdown"><a href="#"><span>Process Hazard Analysis (PHA)</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">HAZOP (Hazard and Operability) Study</a></li>-->
+                        <!--                  <li><a href="#">HAZID (Hazard Identification) Study</a></li>-->
+                        <!--                  <li><a href="#">What-If Analysis</a></li>-->
+                        <!--                  <li><a href="#">HAC</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                        <!--&lt;!&ndash;              2&ndash;&gt;-->
+                        <!--              <li class="dropdown"><a href="#"><span>Hygiene Services</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">Industrial Hygiene Survey</a></li>-->
+                        <!--                  <li><a href="#">Chemical Exposure</a></li>-->
+                        <!--                  <li><a href="#">Noise Monitoring</a></li>-->
+                        <!--                  <li><a href="#">Illumination Survey</a></li>-->
+                        <!--                  <li><a href="#">Ventilation Survey</a></li>-->
+                        <!--                  <li><a href="#">Ergonomics Survey</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                        <!--&lt;!&ndash;              3&ndash;&gt;-->
+                        <!--              <li class="dropdown"><a href="#"><span>Process Safety Management (PSM)</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">PSM Gap analysis CUM Audit</a></li>-->
+                        <!--                  <li><a href="#">PSM Training</a></li>-->
+                        <!--                  <li><a href="#">PSM Implementation Program</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                        <!--&lt;!&ndash;              4&ndash;&gt;-->
+                        <!--              <li class="dropdown"><a href="#"><span>Material Handling</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">EOT Operator Training</a></li>-->
+                        <!--                  <li><a href="#">Hydra Operator Training</a></li>-->
+                        <!--                  <li><a href="#">Forklift Operation Training</a></li>-->
+                        <!--                  <li><a href="#">Rigging Operation</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                        <!--&lt;!&ndash;              5&ndash;&gt;-->
+                        <!--              <li class="dropdown"><a href="#"><span>Risk Assessment</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">HIRA (Hazards Identification and Risk Assessment)</a></li>-->
+                        <!--                  <li><a href="#">QRA (Quantitative Risk Assessment)</a></li>-->
+                        <!--                  <li><a href="#">JSA</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                        <!--&lt;!&ndash;              6&ndash;&gt;-->
+                        <!--              <li class="dropdown"><a href="#"><span>Fire Safety Services</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">Fire Adequacy Survey</a></li>-->
+                        <!--                  <li><a href="#">Fire Safety Audit</a></li>-->
+                        <!--                  <li><a href="#">Fire Load Calculation</a></li>-->
+                        <!--                  <li><a href="#">Design of fire network</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                        <!--&lt;!&ndash;              7&ndash;&gt;-->
+                        <!--              <li class="dropdown"><a href="#"><span>Safety Audit</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">Third Party Safety Audit (IS: 14489)</a></li>-->
+                        <!--                  <li><a href="#">Process Safety Audit</a></li>-->
+                        <!--                  <li><a href="#">Electrical Safety Audit</a></li>-->
+                        <!--                  <li><a href="#">Fire Safety Audit</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                        <!--&lt;!&ndash;              8&ndash;&gt;-->
+                        <!--              <li class="dropdown"><a href="#"><span>Electrical Safety Services</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">Lightning Arrester Survey</a></li>-->
+                        <!--                  <li><a href="#">Lightning Arrester Installation</a></li>-->
+                        <!--                  <li><a href="#">Electrical Safety Audit</a></li>-->
+                        <!--                  <li><a href="#">ARC Flash Study</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                        <!--&lt;!&ndash;              9&ndash;&gt;-->
+                        <!--              <li class="dropdown"><a href="#"><span>Other Services</span> <i class="bi bi-chevron-right"></i></a>-->
+                        <!--                <ul>-->
+                        <!--                  <li><a href="#">OEP (On-Site Emergency Plan)</a></li>-->
+                        <!--                  <li><a href="#">Safety Report (68K)</a></li>-->
+                        <!--                  <li><a href="#">ERDMP (Emergency Response and Disaster Management Plan)</a></li>-->
+                        <!--                </ul>-->
+                        <!--              </li>-->
+                    </ul>
+                </li>
+                <!--          <li><a class="nav-link scrollto" href="#services">SERVICES</a></li>-->
+                <!--          <li><a class="nav-link scrollto" href="#team">TEAM</a></li>-->
+                <li class="dropdown"><a href="#"><span>TRAINING</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">EHS Training</a></li>
+                        <li><a href="#">Accreditation & Methodology</a></li>
+                        <li><a href="#">Training Calendar</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#services">SERVICES</a></li>
             </ul>
-          </li>
-<!--          <li><a class="nav-link scrollto" href="#services">SERVICES</a></li>-->
-<!--          <li><a class="nav-link scrollto" href="#team">TEAM</a></li>-->
-          <li class="dropdown"><a href="#"><span>TRAINING</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">EHS Training</a></li>
-              <li><a href="#">Accreditation & Methodology</a></li>
-              <li><a href="#">Training Calendar</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#services">SERVICES</a></li>
-            </ul>
-          </li>
+            </li>
 
 
-<!--          <li><a class="nav-link scrollto" href="#team">TEAM</a></li>-->
-<!--&lt;!&ndash;          <li><a class="nav-link scrollto" href="#contact">CONTACT</a></li>&ndash;&gt;-->
-<!--          <li><a class="nav-link scrollto" href="#portfolio">CUSTOMER REFERENCE</a></li>-->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+            <!--          <li><a class="nav-link scrollto" href="#team">TEAM</a></li>-->
+            <!--&lt;!&ndash;          <li><a class="nav-link scrollto" href="#contact">CONTACT</a></li>&ndash;&gt;-->
+            <!--          <li><a class="nav-link scrollto" href="#portfolio">CUSTOMER REFERENCE</a></li>-->
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+</header><!-- End Header -->
 
 
 {% block content %}
 {% endblock %}
 
 
-  <!-- ======= Footer ======= -->
-  <footer>
+<!-- ======= Footer ======= -->
+<footer>
     <div class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="footer-content">
-              <div class="footer-head">
-                <div class="footer-logo">
-                  <h2><span>R</span>adhe Industries</h2>
-                </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <div class="footer-logo">
+                                <h2><span>R</span>adhe Industries</h2>
+                            </div>
 
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                <div class="footer-icons">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="bi bi-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="bi bi-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="bi bi-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </li>
-                  </ul>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                            <div class="footer-icons">
+                                <ul>
+                                    <li>
+                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="bi bi-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="bi bi-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          <div class="col-md-4">
-            <div class="footer-content">
-              <div class="footer-head">
-                <h4>information</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <div class="footer-contacts">
-                  <p><span>Tel:</span> {{dest1.call}}</p>
-                  <p><span>Email:</span> {{dest1.email}}</p>
-                  <p><span>Working Time:</span> {{dest1.time}}</p>
+                <!-- end single footer -->
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <h4>information</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                            <div class="footer-contacts">
+                                <p><span>Tel:</span> {{dest1.call}}</p>
+                                <p><span>Email:</span> {{dest1.email}}</p>
+                                <p><span>Working Time:</span> {{dest1.time}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          <div class="col-md-4">
-            <div class="footer-content">
-              <div class="footer-head">
-                <h4>Instagram</h4>
-                <div class="flicker-img">
-                  <a href="#"><img src="{%static 'assets/img/portfolio/1.jpg' %}" alt=""></a>
-                  <a href="#"><img src="{%static 'assets/img/portfolio/2.jpg' %}" alt=""></a>
-                  <a href="#"><img src="{%static 'assets/img/portfolio/3.jpg' %}" alt=""></a>
-                  <a href="#"><img src="{%static 'assets/img/portfolio/4.jpg' %}" alt=""></a>
-                  <a href="#"><img src="{%static 'assets/img/portfolio/5.jpg' %}" alt=""></a>
-                  <a href="#"><img src="{%static 'assets/img/portfolio/6.jpg' %}" alt=""></a>
+                <!-- end single footer -->
+                <div class="col-md-4">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <h4>Instagram</h4>
+                            <div class="flicker-img">
+                                <a href="#"><img alt="" src="{%static 'assets/img/portfolio/1.jpg' %}"></a>
+                                <a href="#"><img alt="" src="{%static 'assets/img/portfolio/2.jpg' %}"></a>
+                                <a href="#"><img alt="" src="{%static 'assets/img/portfolio/3.jpg' %}"></a>
+                                <a href="#"><img alt="" src="{%static 'assets/img/portfolio/4.jpg' %}"></a>
+                                <a href="#"><img alt="" src="{%static 'assets/img/portfolio/5.jpg' %}"></a>
+                                <a href="#"><img alt="" src="{%static 'assets/img/portfolio/6.jpg' %}"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <div class="footer-area-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="copyright text-center">
-              <p>
-                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
-              </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="copyright text-center">
+                        <p>
+                            &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
+                        </p>
+                    </div>
+                    <div class="credits">
+                        <!--
+                        All the links in the footer should remain intact.
+                        You can delete the links only if you purchased the pro version.
+                        Licensing information: https://bootstrapmade.com/license/
+                        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+                      -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
             </div>
-            <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
-            -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </footer><!-- End  Footer -->
+</footer><!-- End  Footer -->
 
 <!--  <div id="preloader"></div>-->
 <!--  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>-->
 
-  <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
 
-  <!-- Template Main JS File -->
-  <script src="{% static 'assets/js/main.js' %}"></script>
+<!-- Template Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
 </html>
