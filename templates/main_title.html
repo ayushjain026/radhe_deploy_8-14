@@ -1,0 +1,64 @@
+{% extends 'base-2.0.html' %}
+{% load static %}
+{% block content %}
+
+<section class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2><B>Add Title</B></h2>
+            <ol>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li>Service Title</li>
+            </ol>
+        </div>
+
+    </div>
+</section>
+<center>
+    <div style="width: 70%; padding: 7%;">
+        <h1>Title</h1><br>
+        <form action="{% url 'maintitle' %}" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="title" placeholder="Title">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+<center>
+<br>
+{% if user.is_superuser %}
+    <div style="width: 50%">
+        <table class="table table-striped" border="2px" style="padding:50px">
+            <thead>
+            <tr>
+                <th scope="col" width="20%">Id</th>
+                <th scope="col" width="50%">Title</th>
+                <th scope="col" width="30%"></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in main_title %}
+            <tr>
+                <th scope="row">{{ i.id }}</th>
+                <td>
+                    {{ i.title }}
+                </td>
+                <td>
+                    <form action="{% url 'delete_title' %}" enctype="multipart/form-data">
+                        <input type="hidden" value="{{ i.id }}" name="id">
+                        <input type="submit" style="background-color: red; color: white; border-radius: 10px; border-color: red" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endif %}
+
+{% endblock %}
+
+

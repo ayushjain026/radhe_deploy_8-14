@@ -30,5 +30,11 @@ class certificates(models.Model):
     certificateName = models.CharField(max_length=100)
 
 
+class support(models.Model):
+    happyClients = models.IntegerField(default=0)
+    projects = models.IntegerField(default=0)
+    hoursOfSupport = models.IntegerField(default=0)
+    hardWork = models.IntegerField(default=0)
+
 class testing(models.Model):
     txt = models.CharField(max_length=200)

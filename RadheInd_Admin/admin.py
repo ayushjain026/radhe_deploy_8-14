@@ -1,5 +1,5 @@
 from django.contrib import admin
-from RadheInd_Admin.models import productDetails, pageTitle, pageTitleOption
+from RadheInd_Admin.models import *
 
 
 class adminPageTitle(admin.ModelAdmin):
@@ -27,7 +27,20 @@ class adminProductDetails(admin.ModelAdmin):
     ]
 
 
+class adminSupport(admin.ModelAdmin):
+    list_display = [
+        'happyClients',
+        'projects',
+        'hoursOfSupport',
+        'hardWork'
+    ]
+
+
 admin.site.register(pageTitle, adminPageTitle)
 admin.site.register(pageTitleOption, adminPageTitleOption)
 admin.site.register(productDetails, adminProductDetails)
+admin.site.register(support, adminSupport)
+admin.site.register(testimonials)
+
+
 
