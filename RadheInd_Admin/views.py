@@ -111,20 +111,38 @@ def edit_servce_content(request):
 
 
 def testimonialPage(request):
-    return render(request, "testimonials.html")
+    if request.method == 'POST':
+        data = testimonials.objects.create(
+            company_logo = request.FILES['companyLogo'],
+            Company_name = request.POST['companyName'],
+            customer_name = request.POST['customerName'],
+            customer_position = request.POST['customerPosition'],
+            feedback = request.POST['customerFeedback']
+        )
+        data.save()
+        messages.success(request, f"Testimonial of company {request.POST['companyName']} Added Sucessfully")
+        return redirect(request.META['HTTP_REFERER'])
+    else:
+        data = testimonials.objects.all()
+        return render(request, "testimonials.html", {'data':data})
 
 
-def testimonialAdd(request):
-    data = testimonials.objects.create(
-        company_logo = request.FILES['companyLogo'],
-        Company_name = request.GET['companyName'],
-        customer_name = request.GET['customerName'],
-        customer_position = request.GET['customerPosition'],
-        feedback = request.GET['customerFeedback']
-    )
-    data.save()
-    messages.success(request, f"Testimonial of company {request.GET['companyName']} Added Sucessfully")
-    return redirect(request.META['HTTP_REFERER'])
+def companyCertificates(request):
+    if request.method == 'POST':
+        data = certificates.objects.create(
+            certificateImage = request.FILES['certificateImage'],
+            certificateName = request.POST['certificateName'],
+        )
+        data.save()
+        messages.success(request, f"Certificate Added Sucessfully")
+        return redirect(request.META['HTTP_REFERER'])
+    else:
+        data = certificates.objects.all()
+        return render(request, "certificate.html", {'data':data})
+
+
+def aboutus(request):
+    return render(request, "aboutus.html")
 
 
 def test(request):

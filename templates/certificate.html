@@ -1,0 +1,66 @@
+{% extends 'base-2.0.html' %}
+{% load static %}
+{% block content %}
+
+<!-- ======= Breadcrumbs Section ======= -->
+<section class="breadcrumbs">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Certificates</h2>
+            <ol>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li>Certificates</li>
+            </ol>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumbs Section -->
+<section class="portfolio-details" id="portfolio-details">
+    <div class="container">
+        <div class="row gy-4">
+            {% for i in data %}
+            <div class="col-lg-6">
+                <div class="portfolio-info">
+                    <table style="width:100%">
+                        <center>
+                            <tr align="center">
+                                <td width="30%" style="vertical-align: center">
+                                    <img src="{{ i.certificateImage.url }}" height="250px" width="200px">
+                                </td>
+                            </tr>
+                            <h3 style="text-align: center; text-transform: capitalize;">{{ i.certificateName }}</h3>
+                        </center>
+                    </table>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<center>
+    {% if user.is_superuser %}
+        <form action="{% url 'companyCertificates' %}" enctype="multipart/form-data" method="post" style="alignment: center; width: 80%; padding-top: 50px">
+            {% csrf_token %}
+            <div class="card w-75">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Add Certificate Data</b></h4><br><br>
+                    <div class="form-group" style="padding-bottom: 10px">
+                        <input type="text" class="form-control" name="certificateName" aria-describedby="emailHelp" placeholder="Certificatr Name">
+                    </div>
+                    <div class="form-group" style="padding-bottom: 10px">
+                        <input type="file" class="form-control" name="certificateImage" aria-describedby="emailHelp" placeholder="Certificate Image">
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary" style="height: 40px; width: 80px; font-size: medium;"
+                           size="10" name="Save">
+                </div>
+            </div>
+        </form>
+        <br><br><br>
+        <h2><a href="/admin/RadheInd_Admin/certificates/">Edit/Delete Certificates</a></h2>
+    {% endif %}
+</center>
+<br><br><br><br><br><br>
+
+{% endblock %}

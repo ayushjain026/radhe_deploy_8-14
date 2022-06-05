@@ -1,10 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+
+
+{% extends 'base-2.0.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    k.img {
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 200px;
+        height: 400px;
+        padding: 2px 6px;
+        float: left;
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    .card {
+        border: 2px;
+    }
+</style>
+
+<br><br><br><br><br>
+<div class="container">
+
+    <div class="card-group">
+        <div class="card">
+            <div class="gallery">
+                <img class="card-img-top" src="{%static 'img/Sanjay_CEO.jpg' %}" height="400px" width="200px" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title" align="center"><b>A Word From Company Owner</b></h5><br>
+                    <p class="card-text"> The company has been founded by Mr. Nilesh Jogal- A Chemical Engineer and
+                        Process Safety Expert having over 15 years of process experience in India’s largest private
+                        petrochemical
+                        complex (Reliance Industries Ltd.).With his extensive experience, the founder Director Mr.
+                        Nilesh Jogal;
+                        leads the organization with quality processes and commitments that are commensurate with the
+                        highest international
+                        standards. Under his stewardship; JOGI has developed methods and procedures for excellence in
+                        Process Safety services while cultivating a high level of professionalism in team members...</p>
+                    <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="gallery">
+                <img class="card-img-top" src="https://media.istockphoto.com/photos/mission-picture-id501539900?k=20&m=501539900&s=612x612&w=0&h=ByNSzVoqeIVFX2jAtZQe_hyeWu4gh4GTjaDnnCoLV_A=" height="400px" width="200px" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title" align="center"><b>OUR MISSION</b></h5><br>
+                    <p class="card-text">Our mission is to help industries & businesses in creating a safe and
+                        injury-free workplace by offering innovative and best-in-class safety solutions
+                        To achieve our vision; we will
+                    </p>
+                    <li>Continuously expand our Service network to meet customer expectations;</li>
+                    <li>Use the most modern resources, technology, and software;</li>
+                    <li>Adopt strong Marketing efforts;</li>
+                    <li>Induct experienced & professional faculties;</li>
+                    <li>Continuously improve the competency of our team.</li>
+                    <p class="card-text"><small class="text-muted">
+                        <br><br>
+
+
+                    </small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="gallery">
+                <img class="card-img-top" src="https://life.futuregenerali.in/Content/images/about/vision.jpg" height="400px" width="200px" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title" align="center"><b>OUR VISION</b></h5><br>
+                    <p class="card-text">Our vision is to have our presence in at least 5 locations across India with an
+                        Annual
+                        Turn Over of 3 Cr by March 2024
+                        by becoming a reputed & an impactful organization providing services like Safety Consulting,
+                        EHS Training & EHS Software.</p>
+                    <p class="card-text">We will be having a mindset
+                        to serve the global market with our quality standards matching the same with the leaders in HSE
+                        services.</p>
+
+                    <p class="card-text"><small class="text-muted"><br><br><br></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+

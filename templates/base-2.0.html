@@ -50,8 +50,8 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
             <i class="bi bi-envelope d-flex align-items-center"><a
-                    href="mailto:contact@example.com">contact@example.com</a></i>
-            <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+                    href="mailto:contact@example.com">ankradheindustries@gmail.com</a></i>
+            <i class="bi bi-phone d-flex align-items-center ms-4"><span>+091 9925224785</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
             <a class="twitter" href="#"><i class="bi bi-twitter"></i></a>
@@ -73,12 +73,11 @@
         <nav class="navbar" id="navbar">
             <ul>
                 <li><a class="nav-link scrollto active" href="{% url 'index' %}">Home</a></li>
-                <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="{% url 'aboutus' %}"><span>About</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#">Certificate</a></li>
+                        <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                        <li><a href="{% url 'companyCertificates' %}">Certificate</a></li>
                         <li><a href="{% url 'testimonialPage' %}">Testimonial</a></li>
-<!--                        <li><a href="#"></a></li>-->
                     </ul>
                 </li>
                     <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
@@ -101,37 +100,18 @@
                                     <li class="dropdown"><a href="{% url 'test' %}"><span>Add Service Category</span></a></li>
                                     <li><a href="/admin/RadheInd_Admin/support/1/change/">Edit Working hrs</a></li>
                                 {% endif %}
-<!--                                <li><a href="#">Drop Down 2</a></li>-->
-<!--                                <li><a href="#">Drop Down 3</a></li>-->
-<!--                                <li><a href="#">Drop Down 4</a></li>-->
                         </ul>
                     </li>
-                <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                <li><a class="nav-link scrollto" href="#team">Team</a></li>
-<!--                <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>-->
-<!--                    <ul>-->
-<!--                        <li><a href="#">Drop Down 1</a></li>-->
-<!--                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                            <ul>-->
-<!--                                <li><a href="#">Deep Drop Down 1</a></li>-->
-<!--                                <li><a href="#">Deep Drop Down 2</a></li>-->
-<!--                                <li><a href="#">Deep Drop Down 3</a></li>-->
-<!--                                <li><a href="#">Deep Drop Down 4</a></li>-->
-<!--                                <li><a href="#">Deep Drop Down 5</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li><a href="#">Drop Down 2</a></li>-->
-<!--                        <li><a href="#">Drop Down 3</a></li>-->
-<!--                        <li><a href="#">Drop Down 4</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
+<!--                <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>-->
+<!--                <li><a class="nav-link scrollto" href="#team">Team</a></li>-->
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-
+        </nav>
+        <!-- .navbar -->
     </div>
-</header><!-- End Header -->
+</header>
+<!-- End Header -->
 
 {% if messages %}
 <ul class="messages">
@@ -149,16 +129,15 @@
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
-
     <div class="footer-newsletter">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <h4>Join Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                    <form action="" method="post">
-                        <input name="email" type="email"><input type="submit" value="Subscribe">
-                    </form>
+<!--                    <h4>Join Our Newsletter</h4>-->
+<!--                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>-->
+<!--                    <form action="" method="post">-->
+<!--                        <input name="email" type="email"><input type="submit" value="Subscribe">-->
+<!--                    </form>-->
                 </div>
             </div>
         </div>
@@ -167,43 +146,42 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-3 col-md-6 footer-contact">
-                    <h3>BizLand<span>.</span></h3>
+                    <h3>Radhe Industries<span>.</span></h3>
                     <p>
-                        A108 Adam Street <br>
-                        New York, NY 535022<br>
-                        United States <br><br>
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
+                        Plot No.-1410,  <br>
+                        Radhe industries, <br>
+                        G.I.D.C Estate, Ankleshwar <br><br>
+                        <strong></strong><img src="https://cdn-icons-png.flaticon.com/512/2934/2934394.png" height="18px" width="18px"> &nbsp;&nbsp;+91 9925224785<br>
+                        <strong></strong> <img src="{% static 'img/email.PNG' %}" style="height:22px; width:22px">&nbsp;&nbsp; ankradheindustries@gmail.com<br>
                     </p>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{% url 'aboutus' %}">About us</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+<!--                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>-->
+<!--                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>-->
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Fire Safety</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Water Safety</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Other Safety</a></li>
+<!--                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>-->
+<!--                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>-->
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Our Social Networks</h4>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+<!--                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>-->
                     <div class="social-links mt-3">
                         <a class="twitter" href="#"><i class="bx bxl-twitter"></i></a>
                         <a class="facebook" href="#"><i class="bx bxl-facebook"></i></a>
@@ -212,7 +190,6 @@
                         <a class="linkedin" href="#"><i class="bx bxl-linkedin"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -222,10 +199,6 @@
             &copy; Copyright <strong><span>Radhe Industry</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
             Designed by <a href="https://bootstrapmade.com/">Dixita Kikani & Ayush Jain</a>
         </div>
     </div>
