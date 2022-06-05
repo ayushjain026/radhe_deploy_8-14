@@ -124,7 +124,9 @@ def testimonialPage(request):
         return redirect(request.META['HTTP_REFERER'])
     else:
         data = testimonials.objects.all()
-        return render(request, "testimonials.html", {'data':data})
+        main_title = pageTitle.objects.all()
+        titleSubOption = pageTitleOption.objects.all()
+        return render(request, "testimonials.html", {'data':data, 'main_title':main_title, 'titleSubOption':titleSubOption})
 
 
 def companyCertificates(request):
@@ -138,11 +140,15 @@ def companyCertificates(request):
         return redirect(request.META['HTTP_REFERER'])
     else:
         data = certificates.objects.all()
-        return render(request, "certificate.html", {'data':data})
+        main_title = pageTitle.objects.all()
+        titleSubOption = pageTitleOption.objects.all()
+        return render(request, "certificate.html", {'data':data, 'main_title':main_title, 'titleSubOption':titleSubOption})
 
 
 def aboutus(request):
-    return render(request, "aboutus.html")
+    main_title = pageTitle.objects.all()
+    titleSubOption = pageTitleOption.objects.all()
+    return render(request, "aboutus.html", {'main_title':main_title, 'titleSubOption':titleSubOption})
 
 
 def test(request):

@@ -5,7 +5,6 @@
 <!-- ======= Breadcrumbs Section ======= -->
 <section class="breadcrumbs">
     <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
             <h2>OUR TESTIMONIALS</h2>
             <ol>
@@ -13,9 +12,9 @@
                 <li>OUR TESTIMONIALS</li>
             </ol>
         </div>
-
     </div>
 </section>
+
 <!-- Breadcrumbs Section -->
 <section class="portfolio-details" id="portfolio-details">
     <div class="container">
@@ -41,38 +40,40 @@
         </div>
     </div>
 </section>
-<center>
-    <form action="{% url 'testimonialAdd' %}" enctype="multipart/form-data" method="post"
-          style="alignment: center; width: 80%; padding-top: 50px">
-        {% csrf_token %}
-        <div class="card w-75">
-            <div class="card-body">
-                <h4 class="card-title"><b>Add Testimonial Data</b></h4><br><br>
-                <div class="form-group" style="padding-bottom: 10px">
-                    <input type="text" class="form-control" name="companyName" aria-describedby="emailHelp" placeholder="Company Name">
-                </div>
-                <div class="form-group" style="padding-bottom: 10px">
-                    <div class="view overlay zoom">
-                        <input type="file" class="img-fluid " aria-describedby="emailHelp" placeholder="Company Logo" name="companyLogo" style="">
+{% if user.is_superuser %}
+    <center>
+        <form action="{% url 'testimonialAdd' %}" enctype="multipart/form-data" method="post"
+              style="alignment: center; width: 80%; padding-top: 50px">
+            {% csrf_token %}
+            <div class="card w-75">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Add Testimonial Data</b></h4><br><br>
+                    <div class="form-group" style="padding-bottom: 10px">
+                        <input type="text" class="form-control" name="companyName" aria-describedby="emailHelp" placeholder="Company Name">
                     </div>
+                    <div class="form-group" style="padding-bottom: 10px">
+                        <div class="view overlay zoom">
+                            <input type="file" class="img-fluid " aria-describedby="emailHelp" placeholder="Company Logo" name="companyLogo" style="">
+                        </div>
+                    </div>
+                    <div class="form-group" style="padding-bottom: 10px">
+                        <input type="text" class="form-control" name="customerName" aria-describedby="emailHelp" placeholder="Customer Name">
+                    </div>
+                    <div class="form-group" style="padding-bottom: 10px">
+                        <input type="text" class="form-control" name="customerPosition" aria-describedby="emailHelp" placeholder="Customer Position">
+                    </div>
+                    <div class="form-group" style="padding-bottom: 10px">
+                        <input type="text" class="form-control" name="customerFeedback" aria-describedby="emailHelp" placeholder="Company Feedback">
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary" style="height: 40px; width: 80px; font-size: medium;" size="10" name="Save">
                 </div>
-                <div class="form-group" style="padding-bottom: 10px">
-                    <input type="text" class="form-control" name="customerName" aria-describedby="emailHelp" placeholder="Customer Name">
-                </div>
-                <div class="form-group" style="padding-bottom: 10px">
-                    <input type="text" class="form-control" name="customerPosition" aria-describedby="emailHelp" placeholder="Customer Position">
-                </div>
-                <div class="form-group" style="padding-bottom: 10px">
-                    <input type="text" class="form-control" name="customerFeedback" aria-describedby="emailHelp" placeholder="Company Feedback">
-                </div>
-                <br>
-                <input type="submit" class="btn btn-primary" style="height: 40px; width: 80px; font-size: medium;" size="10" name="Save">
             </div>
-        </div>
-    </form>
-    <br><br><br>
-    <h2><a href="/admin/RadheInd_Admin/testimonials/">Edit/Delete Testimonial</a></h2>
-</center>
+        </form>
+        <br><br><br>
+        <h2><a href="/admin/RadheInd_Admin/testimonials/">Edit/Delete Testimonial</a></h2>
+    </center>
+{% endif %}
 <br><br><br><br><br><br>
 
 {% endblock %}
